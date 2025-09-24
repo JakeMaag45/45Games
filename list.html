@@ -13,8 +13,12 @@
 
 body {
     font-family: 'Orbitron', monospace;
-    background: linear-gradient(45deg, #0a0a0a, #1a0505, #0a0a0a, #2a0a0a);
-    background-size: 400% 400%;
+    background: 
+        linear-gradient(45deg, rgba(10, 10, 10, 0.8), rgba(26, 5, 5, 0.8), rgba(10, 10, 10, 0.8), rgba(42, 10, 10, 0.8)),
+        url('Screenshot 2025-09-24 11.51.54 AM.png');
+    background-size: 400% 400%, cover;
+    background-position: center center;
+    background-attachment: fixed;
     animation: gradientShift 8s ease infinite;
     color: #ff073a;
     min-height: 100vh;
@@ -120,23 +124,7 @@ body::before {
     overflow: hidden;
 }
 
-.box::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #ff073a, #ff4757, #ff073a);
-    border-radius: 20px;
-    z-index: -1;
-    animation: borderGlow 3s linear infinite;
-}
 
-@keyframes borderGlow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 #gsearchbar {
     width: 100%;
@@ -290,28 +278,6 @@ body::before {
     }
 }
 
-/* Loading animation for the page */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.box {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-#glist a {
-    animation: fadeInUp 0.6s ease-out forwards;
-    animation-delay: calc(var(--i) * 0.1s);
-    opacity: 0;
-}
-
 /* Glitch effect for title on hover */
 .header h1:hover {
     animation: glitch 0.3s ease-in-out;
@@ -330,8 +296,8 @@ body::before {
 <body>
 <div class="container">
     <div class="header">
-        <h1>NEON GAMES</h1>
-        <p>Enter the digital realm</p>
+        <h1>45GAMES</h1>
+
     </div>
     
     <div class="box">
