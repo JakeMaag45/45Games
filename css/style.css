@@ -1,92 +1,92 @@
-/* Base Styles */
+/* NEON THEME */
+
 :root {
-  --bg-color: #000;
-  --text-color: #fff;
-  --accent-bg: #f6f6f6;
-  --hover-bg: #eee;
-  --dark-bg: #060606;
-  --border-light: #ddd;
-  --border-dark: rgba(0, 0, 0, 0.3);
+  --neon-red: #ff073a;
+  --bg-overlay: rgba(0, 0, 0, 0.75);
+  --border-color: #ff073a;
+  --hover-bg: rgba(255, 7, 58, 0.1);
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-red);
 }
 
-/* Layout Container */
 .container {
-  padding: 20px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-overlay);
 }
 
-/* Central Box */
+/* NEON BOX */
 .box {
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.85);
   padding: 20px;
   width: 400px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 15px var(--neon-red);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Scrollable List */
-#glist {
-  overflow-y: auto;
-  max-height: 520px;
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  border-radius: 4px;
 }
 
 /* Search Bar */
 #gsearchbar {
-  width: calc(100% - 2px);
-  font-size: 16px;
+  width: 100%;
   padding: 12px;
-  border: 1px solid var(--border-dark);
-  margin-bottom: 10px;
+  font-size: 16px;
+  background: black;
+  color: var(--neon-red);
+  border: 1px solid var(--border-color);
   outline: none;
+  margin-bottom: 10px;
   border-radius: 4px;
-  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 0 10px var(--neon-red);
 }
 
 #gsearchbar:focus {
-  background-color: var(--hover-bg);
-  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.4);
+  background-color: #150000;
 }
 
-/* Section Headers */
+/* List Scroll Container */
+#glist {
+  overflow-y: auto;
+  max-height: 520px;
+  padding: 0;
+  text-align: center;
+}
+
+/* Section Header */
 #glist h2 {
-  background-color: var(--dark-bg);
-  color: #fff;
+  color: var(--neon-red);
+  background-color: black;
   font-size: 18px;
   font-weight: bold;
   padding: 12px;
-  margin: 0;
-  border-top: 1px solid #111;
+  border-top: 1px solid var(--neon-red);
   user-select: none;
+  text-shadow: 0 0 8px var(--neon-red);
 }
 
-/* Links in List */
+/* List Items */
 #glist a {
   display: block;
   text-decoration: none;
-  color: #000;
-  font-size: 18px;
+  color: var(--neon-red);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 12px;
-  background-color: var(--accent-bg);
-  border-top: 1px solid var(--border-light);
-  transition: background-color 0.2s ease, text-shadow 0.2s ease;
+  font-size: 18px;
+  border-top: 1px solid var(--border-color);
+  transition: 0.2s ease;
+  text-shadow: 0 0 5px var(--neon-red);
 }
 
 #glist a:hover {
   background-color: var(--hover-bg);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px var(--neon-red);
 }
